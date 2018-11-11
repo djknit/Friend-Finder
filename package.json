@@ -1,0 +1,24 @@
+{
+  "name": "Friend-Finder",
+  "version": "1.0.0",
+  "description": "Find your perfect match with this survey-based friend finder. This app uses a Node/Express server.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/djknit/Friend-Finder.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/djknit/Friend-Finder/issues"
+  },
+  "homepage": "https://github.com/djknit/Friend-Finder#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}

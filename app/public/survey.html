@@ -7,8 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <!-- Font Awesome (for home icon) -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
     <!-- jQuery, Popper, Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
@@ -169,9 +167,11 @@
 
         <button id="submit" class="btn btn-primary submit">Submit</button>
 
-        <footer class="text-right">
+        <footer class="text-right pb-2">
             <hr>
             <a href="/api/friends" class="pr-2">API</a>
+            <span class="text-muted">|</span>
+            <a href="https://github.com/djknit/Friend-Finder" class="pl-2">GitHub Repo</a>
         </footer>
 
     </div>
@@ -180,7 +180,16 @@
     <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
-                ...
+                <div class="modal-header">Here's your closest match!</div>
+                <div class="modal-body">
+                    <h1 id="match-name"></h1>
+                    <img id="match-img" src="" alt="Your match">
+                    <h4>Compatibility Score: <span id="compatibility-score"></span>%</h4>
+                    <div id="additional-matches"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
             </div>
         </div>
     </div>
@@ -189,7 +198,6 @@
     <script>
         let person = {};
         $("#submit").on("click", () => {
-            $(".modal").modal("show");
             grabAnswers();
             // Verify that all questions are answered.
             if (person.name === "" || person.picture === "") return alert("You must provide your name and a link to a picture of you.");
@@ -197,6 +205,21 @@
             // Send data to server
             $.post("/api/friends", person, response => {
                 console.log(response);
+                const compatibilityScore = 2.5 * (40 - response.difference);
+                const matches = response.matches;
+                $("#match-name").text(matches[0].name);
+                $("#match-img").attr("src", matches[0].picture);
+                $("#match-img").attr("alt", matches[0].name);
+                $("#compatibility-score").text(compatibilityScore);
+                if (matches.length > 1) {
+                    $("#additional-matches").html("<hr><h5>There was a tie for your best match. The following person(s) have the same compatibility score with you.</h5>");
+                    const newUl = $("<ul>");
+                    for (i = 1; i < matches.length; i++) {
+                        newUl.append($(`<li><h4>${matches[i].name}<h4></li>`));
+                    }
+                    $("#additional-matches").append(newUl);
+                }
+                $(".modal").modal({ backdrop: "static" });
             });
         });
 
@@ -217,7 +240,15 @@
             }
             return true;
         }
+
     </script>
+
+    <style>
+        #match-img {
+            height: 275px;
+            width: auto;
+        }
+    </style>
 
 </body>
 

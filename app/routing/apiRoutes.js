@@ -26,10 +26,13 @@ function findClosestMatches(person) {
             difference += value > person.answers[index] ? value - person.answers[index] : person.answers[index] - value;
         });
         if (difference < differenceToBeat) {
-            matches = [{friend, difference}];
+            matches = [friend];
             differenceToBeat = difference;
         }
-        else if (difference = differenceToBeat) matches.push({friend, difference});
+        else if (difference === differenceToBeat) matches.push(friend);
     });
-    return matches;
+    return {
+        matches,
+        difference: differenceToBeat
+    };
 }

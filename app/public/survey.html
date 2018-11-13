@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- Font Awesome (for home icon) -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+    <!-- jQuery, Popper, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <title>Survey - Friend Finder</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Friend Finder Survey</h1>
+        <p class="lead">Please note that your answers to these questions can be seen by other users of this site.</p>
+        <p class="lead">All fields are required.</p>
+        <hr>
+
+        <h4 class="mb-">Basic Info</h4>
+
+        <label>Your Name</label>
+        <input id="name" class="form-control mb-3">
+
+        <label>Link to Your Picture</label>
+        <input type="text" class="form-control" id="picture">
+        <hr>
+
+        <h4 class="mb-3">How much do you agree with each of the following statements?</h4>
+        <p class="lead">Answers are on a scale of 1-5 where 5 signifies "strongly agree" and 1 signifies "strongly disagree."</p>
+        
+        <h5>1.)&nbsp;&nbsp;I consider myself to be very outgoing.</h5>
+        <input type="radio" id="q1-1" name="q1" value="1">
+        <label class="mr-4 mb-4">1</label>
+        <input type="radio" id="q1-2" name="q1" value="2">
+        <label class="mr-4">2</label>
+        <input type="radio" id="q1-3" name="q1" value="3">
+        <label class="mr-4">3</label>
+        <input type="radio" id="q1-4" name="q1" value="4">
+        <label class="mr-4">4</label>
+        <input type="radio" id="q1-5" name="q1" value="5">
+        <label>5</label>
+        <br>
+            
+        <h5>2.)&nbsp;&nbsp;I like to be outdoors as much as possible.</h5>
+        <input type="radio" id="q2-1" name="q2" value="1">
+        <label class="mr-4 mb-4">1</label>
+        <input type="radio" id="q2-2" name="q2" value="2">
+        <label class="mr-4">2</label>
+        <input type="radio" id="q2-3" name="q2" value="3">
+        <label class="mr-4">3</label>
+        <input type="radio" id="q2-4" name="q2" value="4">
+        <label class="mr-4">4</label>
+        <input type="radio" id="q2-5" name="q2" value="5">
+        <label>5</label>
+        <br>
+            
+        <h5>3.)&nbsp;&nbsp;I am a morning person.</h5>
+        <input type="radio" id="q3-1" name="q3" value="1">
+        <label class="mr-4 mb-4">1</label>
+        <input type="radio" id="q3-2" name="q3" value="2">
+        <label class="mr-4">2</label>
+        <input type="radio" id="q3-3" name="q3" value="3">
+        <label class="mr-4">3</label>
+        <input type="radio" id="q3-4" name="q3" value="4">
+        <label class="mr-4">4</label>
+        <input type="radio" id="q3-5" name="q3" value="5">
+        <label>5</label>
+        <br>
+            
+        <h5>4.)&nbsp;&nbsp;I prefer comedies to dramas.</h5>
+        <input type="radio" id="q4-1" name="q4" value="1">
+        <label class="mr-4 mb-4">1</label>
+        <input type="radio" id="q4-2" name="q4" value="2">
+        <label class="mr-4">2</label>
+        <input type="radio" id="q4-3" name="q4" value="3">
+        <label class="mr-4">3</label>
+        <input type="radio" id="q4-4" name="q4" value="4">
+        <label class="mr-4">4</label>
+        <input type="radio" id="q4-5" name="q4" value="5">
+        <label>5</label>
+        <br>
+    
+        <h5>5.)&nbsp;&nbsp;I am open to new ideas and experiences.</h5>
+        <input type="radio" id="q5-1" name="q5" value="1">
+        <label class="mr-4 mb-4">1</label>
+        <input type="radio" id="q5-2" name="q5" value="2">
+        <label class="mr-4">2</label>
+        <input type="radio" id="q5-3" name="q5" value="3">
+        <label class="mr-4">3</label>
+        <input type="radio" id="q5-4" name="q5" value="4">
+        <label class="mr-4">4</label>
+        <input type="radio" id="q5-5" name="q5" value="5">
+        <label>5</label>
+        <br>
+            
+        <h5>6.)&nbsp;&nbsp;I like long walks on the beach.</h5>
+        <input type="radio" id="q6-1" name="q6" value="1">
+        <label class="mr-4 mb-4">1</label>
+        <input type="radio" id="q6-2" name="q6" value="2">
+        <label class="mr-4">2</label>
+        <input type="radio" id="q6-3" name="q6" value="3">
+        <label class="mr-4">3</label>
+        <input type="radio" id="q6-4" name="q6" value="4">
+        <label class="mr-4">4</label>
+        <input type="radio" id="q6-5" name="q6" value="5">
+        <label>5</label>
+        <br>
+            
+        <h5>7.)&nbsp;&nbsp;It is more important to me to eat a healthy diet than to eat food that I enjoy.</h5>
+        <input type="radio" id="q7-1" name="q7" value="1">
+        <label class="mr-4 mb-4">1</label>
+        <input type="radio" id="q7-2" name="q7" value="2">
+        <label class="mr-4">2</label>
+        <input type="radio" id="q7-3" name="q7" value="3">
+        <label class="mr-4">3</label>
+        <input type="radio" id="q7-4" name="q7" value="4">
+        <label class="mr-4">4</label>
+        <input type="radio" id="q7-5" name="q7" value="5">
+        <label>5</label>
+        <br>
+            
+        <h5>8.)&nbsp;&nbsp;My favorite color is magenta.</h5>
+        <input type="radio" id="q8-1" name="q8" value="1">
+        <label class="mr-4 mb-4">1</label>
+        <input type="radio" id="q8-2" name="q8" value="2">
+        <label class="mr-4">2</label>
+        <input type="radio" id="q8-3" name="q8" value="3">
+        <label class="mr-4">3</label>
+        <input type="radio" id="q8-4" name="q8" value="4">
+        <label class="mr-4">4</label>
+        <input type="radio" id="q8-5" name="q8" value="5">
+        <label>5</label>
+        <br>
+
+        <h5>9.)&nbsp;&nbsp;I believe that I am more likely to be friends with someone who answered these questions similarly to me than someone who's answers were less similar.</h5>
+        <input type="radio" id="q9-1" name="q9" value="1">
+        <label class="mr-4 mb-4">1</label>
+        <input type="radio" id="q9-2" name="q9" value="2">
+        <label class="mr-4">2</label>
+        <input type="radio" id="q9-3" name="q9" value="3">
+        <label class="mr-4">3</label>
+        <input type="radio" id="q9-4" name="q9" value="4">
+        <label class="mr-4">4</label>
+        <input type="radio" id="q9-5" name="q9" value="5">
+        <label>5</label>
+        <br>
+            
+        <h5>10.)&nbsp;&nbsp;I am a very stable genius.</h5>
+        <input type="radio" id="q10-1" name="q10" value="1">
+        <label class="mr-4 mb-4">1</label>
+        <input type="radio" id="q10-2" name="q10" value="2">
+        <label class="mr-4">2</label>
+        <input type="radio" id="q10-3" name="q10" value="3">
+        <label class="mr-4">3</label>
+        <input type="radio" id="q10-4" name="q10" value="4">
+        <label class="mr-4">4</label>
+        <input type="radio" id="q10-5" name="q10" value="5">
+        <label>5</label>
+        <br>
+
+        <button id="submit" class="btn btn-primary submit">Submit</button>
+
+        <footer class="text-right">
+            <hr>
+            <a href="/api/friends" class="pr-2">API</a>
+        </footer>
+
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                ...
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        let person = {};
+        $("#submit").on("click", () => {
+            $(".modal").modal("show");
+            grabAnswers();
+            // Verify that all questions are answered.
+            if (person.name === "" || person.picture === "") return alert("You must provide your name and a link to a picture of you.");
+            if (!validateAnswers()) return alert("You must answer all of the questions before we can find you a friend.");
+            // Send data to server
+            $.post("/api/friends", person, response => {
+                console.log(response);
+            });
+        });
+
+        function grabAnswers() {
+            person.name = $("#name").val().trim();
+            person.picture = $("#picture").val().trim();
+            person.answers = [];
+            for (i = 1; i < 11; i++) {
+                // Part of the next line of code is borrowed from the following source:
+                 // https://www.tutorialrepublic.com/faq/how-to-get-the-value-of-selected-radio-button-using-jquery.php
+                person.answers.push($(`input[name='q${i}']:checked`).val());
+            }
+        }
+
+        function validateAnswers() {
+            for (i = 0; i < person.answers.length; i++) {
+                if (!person.answers[i]) return false;
+            }
+            return true;
+        }
+    </script>
+
+</body>
+
+</html>

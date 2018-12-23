@@ -94,6 +94,54 @@ let friends = [
             4,
             1
         ]
+    },
+    {
+        "name": "Turanga Leela",
+        "picture": "https://www.syfy.com/sites/syfy/files/styles/1200x1200/public/cast_futurama_turangaleela_0.jpg?itok=VGHVdw33&timestamp=1508358104",
+        "answers": [
+            5,
+            5,
+            5,
+            2,
+            4,
+            4,
+            4,
+            4,
+            4,
+            1
+        ]
+    },
+    {
+        "name": "Dr. Amy Wong",
+        "picture": "https://www.netgainit.com/wp-content/uploads/2017/05/Amy-Wong-image-amy-wong-36479000-300-225.png",
+        "answers": [
+            5,
+            3,
+            2,
+            4,
+            5,
+            3,
+            2,
+            3,
+            4,
+            1
+        ]
+    },
+    {
+        "name": "Hermes Conrad",
+        "picture": "https://vignette.wikia.nocookie.net/inkagames-english/images/0/0d/Hermes.png/revision/latest?cb=20161205130413",
+        "answers": [
+            2,
+            2,
+            3,
+            4,
+            2,
+            1,
+            2,
+            2,
+            5,
+            5
+        ]
     }
 ];
 
